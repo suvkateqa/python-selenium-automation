@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from behave import given, when, then
 
 CART = (By.ID, 'nav-cart-count')
-PRODUCT_NAME = ()
+PRODUCT_NAME = (By.CSS_SELECTOR, "#sc-active-cart li")
 
 
 @when('Open cart page')
@@ -14,3 +14,9 @@ def open_cart_page(context):
 def verify_cart_count(context, expected_count):
     actual_text = context.driver.find_element(*CART).text
     assert expected_count == actual_text, f'Expected {expected_count}, but got {actual_text} '
+
+
+@then('Verify cart has correct product')
+def verify_product_name(context):
+    actual_name = context.driver.find_element(*PRODUCT_NAME).text
+    assert context.product_name[:30] in actual_name, f'Expected {context.product_name}, but got {actual_name}'

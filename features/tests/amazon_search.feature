@@ -17,9 +17,15 @@ Feature: Amazon search tests
     When Input text Tritan Farm to Table Pitcher
     When Click on search button
     And Click on the first product
+    And Store product name
     And Click on Add to cart button
     And Open cart page
     Then Verify cart has 1 item(s)
+    And Verify cart has correct product
+
+
+
+
 
 
 

@@ -11,6 +11,8 @@ driver = webdriver.Chrome(service=service)
 driver.find_element(By.ID, 'twotabsearchtextbox')
 driver.find_element(By.ID, 'ap_customer_name')
 driver.find_element(By.ID, 'ap_email')
+#by ID and nested list elements like links a
+driver.find_element(By.ID, '#zg_header a')
 
 
 # By CSS, using ID Syntax tag#ID but you can omit tag. instead of  'input#twotabsearchtextbox'use '#twotabsearchtextbox'
@@ -22,6 +24,8 @@ driver.find_element(By.CSS_SELECTOR, '#ap_password_check')
 driver.find_element(By.CSS_SELECTOR, '#continue')
 driver.find_element(By.CSS_SELECTOR, '#ab-registration-link')
 
+# By CSS ID, Class and attribute Syntax #ID tag.[attribute=value]
+driver.find_element(By.CSS_SELECTOR, "#nav-xshop a.nav-a[data-csa-c-type='link'] ")
 
 # By class - Syntax tag.class You can omit tag --> .class
 driver.find_element(By.CSS_SELECTOR, ".icp-nav-flag-us")
