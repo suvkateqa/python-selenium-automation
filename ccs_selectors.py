@@ -13,6 +13,7 @@ driver.find_element(By.ID, 'ap_customer_name')
 driver.find_element(By.ID, 'ap_email')
 #by ID and nested list elements like links a
 driver.find_element(By.ID, '#zg_header a')
+driver.find_element(By.CSS_SELECTOR, '#nav-signin-tooltip a.nav-action-signin-button')
 
 
 # By CSS, using ID Syntax tag#ID but you can omit tag. instead of  'input#twotabsearchtextbox'use '#twotabsearchtextbox'
@@ -35,12 +36,15 @@ driver.find_element(By.CSS_SELECTOR, ".a-spacing-small")
 driver.find_element(By.CSS_SELECTOR, ".icp-nav-flag-us.icp-nav-flag")
 # By tag + multiple classes Syntax tag.class.class
 driver.find_element(By.CSS_SELECTOR, "span.icp-nav-flag-us.icp-nav-flag")
+driver.find_element(By.CSS_SELECTOR, 'h2 span.a-text-normal')
+
 
 # By CSS using attributes (except ID and class see syntax for it above) Syntax tag[attribute='value']
 driver.find_element("a[href='/gp/bestsellers/?ref_=nav_cs_bestsellers']")
 driver.find_element("a[data-csa-c-content-id='nav_cs_bestsellers']")
 driver.find_element(By.CSS_SELECTOR, "input[name='email']")
 driver.find_element(By.CSS_SELECTOR, "[name='email']")
+driver.find_element(By.CSS_SELECTOR,"[data-component-type='s-search-results']")
 driver.find_element(By.CSS_SELECTOR, "[href='/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088']")
 # By multiple attributes, Syntax tag[attribute='value'][attribute='value']
 driver.find_element(By.CSS_SELECTOR, "input[name='email'][type='email'][maxlength='128']")

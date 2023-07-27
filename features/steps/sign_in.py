@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @when('Click Returns and Orders')
@@ -17,6 +18,11 @@ def verify_sign_in_header(context, expected_result):
 @then('Verify that Email field is present')
 def verify_email_field(context):
     actual_result = context.driver.find_element(By.ID, 'ap_email').is_displayed(), 'Email field not shown'
+
+
+@then('Verify Sign In page opens')
+def verify_signin_opened(context):
+    context.driver.wait.until(EC.url_contains('https://www.amazon.com/ap/signin'))
 
 
 
