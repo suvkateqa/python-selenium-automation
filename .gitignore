@@ -90,7 +90,7 @@ app_binaries/
 
 .DS_Store
 
-/features/test_results/*
+/webtests/features/test_results/*
 
 # Screenshots
 *.png
