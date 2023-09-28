@@ -8,7 +8,7 @@ Feature: Sign in page display for new/logged out user
     Then Verify that header Sign in is visible
     Then Verify that Email field is present
 
-
+@smoke
   Scenario:  User can see Sign In page
     Given Open Amazon page
     When Click Returns and Orders

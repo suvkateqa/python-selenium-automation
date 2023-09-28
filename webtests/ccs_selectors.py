@@ -18,9 +18,9 @@ driver.find_element(By.CSS_SELECTOR, '#nav-signin-tooltip a.nav-action-signin-bu
 
 # By CSS, using ID Syntax tag#ID but you can omit tag. instead of  'input#twotabsearchtextbox'use '#twotabsearchtextbox'
 driver.find_element(By.CSS_SELECTOR, '#twotabsearchtextbox')
-driver.find_element(By.CSS_SELECTOR, '#ap_customer_name')
-driver.find_element(By.CSS_SELECTOR, '#ap_email')
-driver.find_element(By.CSS_SELECTOR, '#ap_password')
+driver.find_element(By.CSS_SELECTOR, 'ap_customer_name')
+driver.find_element(By.CSS_SELECTOR, 'ap_email')
+driver.find_element(By.CSS_SELECTOR, 'ap_password')
 driver.find_element(By.CSS_SELECTOR, '#ap_password_check')
 driver.find_element(By.CSS_SELECTOR, '#continue')
 driver.find_element(By.CSS_SELECTOR, '#ab-registration-link')
